@@ -1,0 +1,80 @@
+.m-footer {
+	&__main {
+		max-width: $max-width;
+		margin: 0 auto;
+		position: relative;
+		height: 101px;
+		color: $text-grey-color;
+	}
+	&__subscribe {
+		text-align: center;
+		margin: auto;
+		height: 288px;
+		background-color: $color-blue;
+		background-image: url(../img/footer-bg.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		padding-top: 68px;
+	}
+	&__text {
+		color: $text-white-color;
+		@include fonts($playfair-font);
+		font-size: 38px;
+		margin-bottom: 30px;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 12px;
+		color: $text-grey-color;
+		font-weight: bold;
+		letter-spacing: .1em;
+		margin-bottom: 20px;
+	}
+	&__input-box {
+		border: 2px solid $color-border-footer-input;
+		height: 50px;
+		width: 302px;
+		margin: auto;
+		border-radius: 25px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			border-left:2px solid $text-white-color;
+			border-top:2px solid $text-white-color;
+			height: 5px;
+			width: 5px;
+			pointer-events: none;
+			display: block;
+			right: 22px;
+			top: 20px;
+			transform: rotate(135deg);
+		}
+	}
+	&__input {
+		height: 46px;
+		width: 100%;
+		line-height: 46px;
+		font-size: 12px;
+		text-transform: uppercase;
+		background-color: transparent;
+		color: $text-white-color;
+		padding: 0 25px;
+		letter-spacing: .1em;
+
+		&::-webkit-input-placeholder {color:$text-white-color;}
+		&::-moz-placeholder          {color:$text-white-color;}/* Firefox 19+ */
+		&:-moz-placeholder           {color:$text-white-color;}/* Firefox 18- */
+		&:-ms-input-placeholder      {color:$text-white-color;}
+	}
+	&__reserved {
+		color: $text-light-grey-color;
+		font-size: 12px;
+		letter-spacing: .1em;
+		float: right;
+		position: relative;
+		top: -18px;
+		font-weight: bold;
+	}
+}

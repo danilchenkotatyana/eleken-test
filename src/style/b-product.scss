@@ -1,0 +1,70 @@
+.m-producl-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin-left: -$margin-product;
+	margin-right: -$margin-product;
+	margin-bottom: 22px;
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+}
+
+.b-product {
+	width: 263px;
+	margin-right: $margin-product;
+	margin-left: $margin-product;
+	position: relative;
+	align-self:flex-start;
+	padding-bottom: 2.3em;
+	text-align: center;
+	&__image {
+		height: 336px;
+		background-color: #eae8e9;
+		margin-bottom: 1.6em;
+		&__img {
+			position: relative;
+			display: block;
+			margin: auto;
+		}
+	}
+	&__label {
+		text-transform: uppercase;
+		font-size: 11px;
+		background-color: $color-blue;
+		border-radius: 15px;
+		color: $color-white;
+		padding-left: 10px;
+		padding-right: 10px;
+		position: absolute;
+		top: 26px;
+		left: 26px;
+		line-height: 25px;
+		text-align: center;
+		z-index: 1;
+	}
+	&__name {
+		color: $text-grey-color;
+		padding-bottom: .6em;
+		@include fonts($playfair-font);
+	}
+	&__price {
+		color: $text-light-grey-color;
+		&__regular {
+			display: inline-block;
+			padding: 0 .3em;
+		}
+		&__old {
+			display: inline-block;
+			padding: 0 .3em;
+			text-decoration: line-through;
+		}
+		&__new {
+			display: inline-block;
+			padding: 0 .3em;
+			color: $text-red-color;
+		}
+	}
+}

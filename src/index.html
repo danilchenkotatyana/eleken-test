@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>test buttons library</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+	//= templates/header.html
+		<section class="m-content tabs">
+			<h1 class="b-title">Catalog</h1>
+			<div class="m-tabs">
+				<ul class="b-nav js-tab">
+					<li class="b-nav__item l-active">all</li>
+					<li class="b-nav__item">t-shirts</li>
+					<li class="b-nav__item">sweaters</li>
+					<li class="b-nav__item">shorts</li>
+					<li class="b-nav__item">jackets</li>
+					<li class="b-nav__item">accessories</li>
+				</ul>
+			</div>
+			<div class="m-producl-list jq-tabs-list">
+				<div class="m-producl-list__items">
+					//= templates/product.html
+					//= templates/product1.html
+					//= templates/product2.html
+					//= templates/product3.html
+					//= templates/product.html
+					//= templates/product1.html
+					//= templates/product2.html
+					//= templates/product3.html
+				</div>
+				<div class="m-producl-list__items">
+					//= templates/product.html
+					//= templates/product2.html
+					//= templates/product3.html
+				</div>
+				<div class="m-producl-list__items">
+					//= templates/product.html
+					//= templates/product1.html
+					//= templates/product2.html
+					//= templates/product3.html
+				</div>
+			</div>
+			<div class="b-load-link">load more...</div>
+		</section>
+	//= templates/footer.html
+	</body>
+</html>

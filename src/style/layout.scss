@@ -1,0 +1,71 @@
+//constants
+$text-white-color: #fff;
+$text-grey-color: #333;
+$text-light-grey-color: rgba(51,51,51,.5);
+$text-red-color: #fc411d;
+
+$color-blue: #1f86da;
+
+$color-white: #fff;
+$color-grey-border: #ededed;
+$color-border-footer-input: rgba(255,255,255,.3);
+
+
+$margin-product: .9375em;
+$max-width: 1142px;
+$top-menu-height: 44px;
+
+//fonts
+@mixin fonts($font) {
+	font-family: ($font);
+}
+$lato-font: 'Lato', sans-serif;
+$playfair-font: 'Playfair Display', serif;
+
+html {
+	font-size: 100%;
+	color: $text-grey-color;
+	font-weight: 300;
+	background-color: $color-white;
+	@include fonts($lato-font);
+}
+body {
+	margin: 0 auto;
+	min-width: 320px;
+}
+input {
+	@include fonts($lato-font);
+}
+.m-content {
+	margin: 0 auto;
+	padding-right: $margin-product;
+	padding-left: $margin-product;
+	max-width: calc(#{$max-width} + #{$margin-product} * 2);
+}
+.b-title {
+	font-size: 58px;
+	text-align: center;
+	margin-bottom: 64px;
+	@include fonts($playfair-font);
+}
+.m-tabs {
+	margin-bottom: 48px;
+	.b-nav {
+		justify-content:center;
+		color: $text-light-grey-color;
+		&__item {
+			margin: 0 25px;
+		}
+	}
+}
+.b-load-link {
+	text-align: center;
+	margin: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: $text-light-grey-color;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	margin-bottom: 58px;
+}

@@ -1,0 +1,155 @@
+header {
+	border-bottom: 1px solid $color-grey-border;
+	border-top: 1px solid $color-grey-border;
+	margin-top: $top-menu-height;
+	margin-bottom: 92px;
+	height: 102px;
+	font-size: 11px;
+	color: $text-light-grey-color;
+	//position: relative;
+	//position: absolute;
+	//top: 0;
+}
+
+.m-header {
+	max-width: $max-width;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	position: relative;
+	font-weight: bold;
+	&__top-menu {
+		margin-top: -$top-menu-height;
+		height: $top-menu-height;
+		font-weight: bold;
+	}
+	&__top-selection {
+		position: absolute;
+		top: 0;
+		height: $top-menu-height;
+		right: 0;
+	}
+	&__main {
+		position: relative;
+		height: 102px;
+	}
+}
+.b-logo {
+	width: 94px;
+	height: 39px;
+	cursor: pointer;
+	transform: translateY(75%);
+	img {
+		width: 100%;
+	}
+}
+.b-top-select {
+	display: inline-block;
+	margin-left: 20px;
+	cursor: pointer;
+	padding-right: 1.3em;
+	position: relative;
+	height: $top-menu-height;
+
+	&:last-child {
+		border-left: 1px solid $color-grey-border;
+		padding-left: 20px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		border-left:1px solid $text-grey-color;
+		border-top:1px solid $text-grey-color;
+		height: 4px;
+		width: 4px;
+		pointer-events: none;
+		display: block;
+		right: 1px;
+		top: 18px;
+		transform: rotate(-135deg);
+	}
+	&__main {
+		line-height: $top-menu-height;
+		&:hover,
+		&:active {
+			color: $text-grey-color;
+		}
+	}
+}
+.b-help-menu {
+	display: inline-block;
+	margin-right: 2.6em;
+	margin-top: 1.45em;
+	cursor: pointer;
+	&:hover,
+	&:active {
+		color: $text-grey-color;
+	}
+}
+nav {
+	max-width: 60%;
+	margin: 5px auto;
+	font-size: 1.1em;
+}
+.b-header-bag {
+	display: flex;
+	margin-top: -17px;
+	float: right;
+	&__text {
+		padding-right: 12px;
+		letter-spacing: .2em;
+		cursor: pointer;
+		&:hover,
+		&:active {
+			color: $text-grey-color;
+		}
+	}
+	&__round {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		border: 2px solid $color-blue;
+		border-radius: 24px;
+		text-align: center;
+		color: $text-grey-color;
+		top: -18px;
+		position: relative;
+		font-size: 1.1em;
+		margin-right: 18px;
+		cursor: pointer;
+	}
+	&__search {
+		width: 18px;
+		height: 18px;
+		padding: 3px;
+		cursor: pointer;
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			width: 8px;
+			height: 8px;
+			background-color: $color-white;
+			border:2px solid $text-light-grey-color;
+			border-radius: 6px;
+			top: 0;
+			position: absolute;
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 5px;
+			height: 2px;
+			background-color: $text-light-grey-color;
+			position: absolute;
+			transform: rotate(-135deg);
+			bottom: 6px;
+			right: 0;
+		}
+		&:hover {
+			&::before {border-color: $color-blue;}
+			&::after {background-color: $color-blue;}
+		}
+	}
+
+}

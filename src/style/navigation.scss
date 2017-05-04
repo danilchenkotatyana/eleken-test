@@ -1,0 +1,48 @@
+.b-nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: center;
+	font-size: 12px;
+
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	position: relative;
+	font-weight: bold;
+	&__item {
+		cursor: pointer;
+		margin: 0 28px;
+		position: relative;
+		&:hover,
+		&:active,
+		&.l-active {
+			color: $text-grey-color;
+		}
+		&__red {
+			color: $text-red-color;
+			&:hover,
+			&:active,
+			&.l-active {
+				color: $text-red-color;
+			}
+		}
+		&::before,
+		&.l-active::before {
+			display: block;
+			position: absolute;
+			content: "";
+			height: 2px;
+			width: 0;
+			background-color: $color-blue;
+			transition: width .3s ease-in-out, right .3s ease-in-out;
+			left: 0;
+			bottom: -8px;
+		}
+		&:hover::before,
+		&.l-active::before {
+			width: 100%;
+			//left: 100%;
+		}
+	}
+}
